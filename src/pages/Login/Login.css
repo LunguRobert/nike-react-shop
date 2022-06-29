@@ -1,0 +1,29 @@
+.login-page {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.login-page button{
+    padding:20px 50px;
+    margin-bottom: 20px;
+    border-radius: 7px;
+    color: #ffff;
+
+}
+
+.login-page .google {
+    background-color: #DB4437;
+
+}
+
+
+.login-page .facebook{
+    background-color: #3B5998;
+
+}

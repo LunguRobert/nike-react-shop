@@ -1,0 +1,43 @@
+.header img{
+    mix-blend-mode: multiply;
+}
+header{
+    background-color: #F1F1F1;
+}
+
+#login{
+    font-size: large;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+#cart{
+    margin-left: 20px;
+}
+
+p{
+    margin-left: 10px;
+    padding-top:15px;
+    
+}
+
+.logout{
+    border: none;
+}
+
+.logout:hover{
+    font-weight: bold;
+}
+
+@media screen and (max-width:768px) {
+    p, button{
+        font-size: 4vw;
+    }
+
+    .header img{
+        max-width: 100px;
+        max-height: 100px;
+    }
+}

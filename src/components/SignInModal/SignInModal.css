@@ -1,0 +1,77 @@
+
+.modala{
+    position: fixed;
+    left: 0; 
+    right: 0; 
+    bottom: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    outline: 0;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 1050;
+    visibility: hidden;
+}
+
+.login-modal{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    height: 500px;
+    width: 350px;
+    left: 0; 
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin:auto;
+    padding: 2rem;
+    background-color:#ffff;
+    border-radius: 7px;
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+}
+
+.login-modal h4{
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #25292D;
+}
+
+.login-modal small{
+    color: #808080;
+}
+
+.login-modal .buttons{
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.buttons button{
+    padding:10px;
+    margin-bottom: 20px;
+    border-radius: 7px;
+    color: #ffff;
+}
+
+.buttons .google{
+    background-color: #DB4437;
+}
+
+.buttons .facebook{
+    background-color: #3B5998;
+}
+
+.close-modal{
+    background-color: transparent;
+    border: none;
+    text-align: end;
+    color: #808080;
+}
+
+.buttons button:hover{
+    background-color: #25292D;
+}
