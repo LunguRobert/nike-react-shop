@@ -1,11 +1,10 @@
 .cart-page img {
-    max-height: 100px;
+  max-height: 100px;
 }
 
-.close-button{
-    background-color: transparent;
-    border: none;
-    text-align: end;
-    color: #808080;
+.close-button {
+  background-color: transparent;
+  border: none;
+  text-align: end;
+  color: #808080;
 }
-

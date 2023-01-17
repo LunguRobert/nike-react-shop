@@ -1,64 +1,44 @@
-import React from 'react'
-import Layout from '../components/Layout'
-import HomeCategory from '../components/HomeCategory';
-import products from '../utils/products.json';
-
+import React from "react";
+import Layout from "../components/Layout";
+import HomeCategory from "../components/HomeCategory";
+import products from "../utils/products.json";
 
 class Home extends React.Component {
-
-  constructor(){
-
+  constructor() {
     super();
     this.state = {
-      categories:[],
-      categoryNames:[]
+      categories: [],
+      categoryNames: [],
     };
-
   }
 
-  componentDidMount(){
-
+  componentDidMount() {
     const categories = Object.values(products);
     const categoryNames = Object.keys(products);
-    this.setState({categories,categoryNames});
-
+    this.setState({ categories, categoryNames });
   }
 
-
-  render(){
-
+  render() {
     return (
-
       <Layout>
-      
         <div className="container">
-
           <div className="row">
-          
-            {
-              this.state.categories.map((category,index)=>{
-                return (
-                  <HomeCategory
-                   image={category.image} 
-                   title={category.name}
-                   description={category.description}
-                   key={index}
-                   routeName={this.state.categoryNames[index]}
-                  />
-                )
-              })
-            }
-  
+            {this.state.categories.map((category, index) => {
+              return (
+                <HomeCategory
+                  image={category.image}
+                  title={category.name}
+                  description={category.description}
+                  key={index}
+                  routeName={this.state.categoryNames[index]}
+                />
+              );
+            })}
           </div>
-
         </div>
-        
       </Layout>
-      
-    )
-
+    );
   }
-  
 }
 
 export default Home;

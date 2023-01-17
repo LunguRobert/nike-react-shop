@@ -1,47 +1,43 @@
 const initialState = {
-    filterIntervals:[],
-    products:[]
-}
+  filterIntervals: [],
+  products: [],
+};
 
+function filterReducer(state = initialState, action) {
+  switch (action.type) {
+    case "ADD_FILTER":
+      const newState = {
+        ...state,
+        filterIntervals: [
+          ...state.filterIntervals,
+          ...action.payload.filterIntervals,
+        ],
+      };
+      return newState;
 
-function filterReducer(state=initialState,action){
+    case "REMOVE_FILTER":
+      const itemToRemove = Object.values(action.payload.filterIntervals[0]);
+      const remainFilters = state.filterIntervals.filter((interval) => {
+        if (interval.id !== itemToRemove[0]) {
+          return interval;
+        }
+      });
 
-    switch(action.type){
+      const stateAfterRemove = {
+        ...state,
+        filterIntervals: [...remainFilters],
+      };
+      return stateAfterRemove;
 
-        case 'ADD_FILTER':
-            
-            const newState = {
-                ...state,
-                filterIntervals:[
-                    ...state.filterIntervals,
-                    ...action.payload.filterIntervals
-                ],
-            }
-            return newState
-        
-        case 'REMOVE_FILTER':
-            const itemToRemove = Object.values(action.payload.filterIntervals[0]);
-            const remainFilters = state.filterIntervals.filter((interval)=>{
-                if(interval.id !==itemToRemove[0] ){
-                    return interval;
-                }
-            });
-
-            const stateAfterRemove = {
-                ...state,
-                filterIntervals: [...remainFilters]
-            }
-            return stateAfterRemove;
-
-            case 'RESET_FILTERS':
-                const resetState = {
-                    filterIntervals:[],
-                    products:[]
-                }
-                return resetState;
-        default: 
-            return state;
-    }
+    case "RESET_FILTERS":
+      const resetState = {
+        filterIntervals: [],
+        products: [],
+      };
+      return resetState;
+    default:
+      return state;
+  }
 }
 
 export default filterReducer;

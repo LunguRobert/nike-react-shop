@@ -1,22 +1,18 @@
-.filter-list{
-    width: 25%;
+.filter-list {
+  width: 25%;
 }
 
+@media screen and (max-width: 768px) {
+  .category {
+    flex-direction: column;
+    align-items: center;
+  }
 
+  h2 {
+    align-self: flex-start;
+  }
 
-@media screen and (max-width:768px) {
-    .category{
-        flex-direction: column;
-        align-items: center;
-    }
-
-    h2{
-        align-self: flex-start;
-    }
-
-    .filter-list{
-        width: 100%;
-    }
-    
-   
+  .filter-list {
+    width: 100%;
+  }
 }

@@ -1,43 +1,43 @@
-.header img{
-    mix-blend-mode: multiply;
+.header img {
+  mix-blend-mode: multiply;
 }
-header{
-    background-color: #F1F1F1;
-}
-
-#login{
-    font-size: large;
-    font-weight: bolder;
-    display: flex;
-    align-items: center;
-    text-align: center;
+header {
+  background-color: #f1f1f1;
 }
 
-#cart{
-    margin-left: 20px;
+#login {
+  font-size: large;
+  font-weight: bolder;
+  display: flex;
+  align-items: center;
+  text-align: center;
 }
 
-p{
-    margin-left: 10px;
-    padding-top:15px;
-    
+#cart {
+  margin-left: 20px;
 }
 
-.logout{
-    border: none;
+p {
+  margin-left: 10px;
+  padding-top: 15px;
 }
 
-.logout:hover{
-    font-weight: bold;
+.logout {
+  border: none;
 }
 
-@media screen and (max-width:768px) {
-    p, button{
-        font-size: 4vw;
-    }
+.logout:hover {
+  font-weight: bold;
+}
 
-    .header img{
-        max-width: 100px;
-        max-height: 100px;
-    }
+@media screen and (max-width: 768px) {
+  p,
+  button {
+    font-size: 4vw;
+  }
+
+  .header img {
+    max-width: 100px;
+    max-height: 100px;
+  }
 }
